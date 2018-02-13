@@ -32,13 +32,17 @@ public class employee
 				userChoice = userInput.nextInt();
 				if(userChoice==1)
 					{
-						
+						buyStock();
 					}
 				else if(userChoice
 						==2)
 					{
 						System.out.println("Bye bye!!!");
 					}
+				
+			}
+		private static void buyStock()
+			{
 				
 			}
 

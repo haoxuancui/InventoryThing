@@ -5,12 +5,13 @@ public class Employee
 	{
 		private static int userChoice;
 		private static int buyingstockChoice;
+		private static int stockCopies;
 		private static int password;
 		private static boolean keepAsking=true;
 		
-		public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException 
+		public static void notMainMethod()throws FileNotFoundException, UnsupportedEncodingException 
 		{
-			InventoryMain.fillArray();
+			
 			meetTHeUsers();
 			
 			
@@ -18,6 +19,7 @@ public class Employee
 
 		public static void meetTHeUsers()throws FileNotFoundException, UnsupportedEncodingException
 		{
+			InventoryMain.fillArray();
 			System.out.println("what is the password");
 				Scanner userInput = new Scanner(System.in);
 				password=userInput.nextInt();
@@ -36,7 +38,7 @@ public class Employee
 			System.out.println("Hi, here is the stock for us.");
 			for(int i=0; i<InventoryMain.store.size();i++)
 				{
-					System.out.println(InventoryMain.store.get(i).getName()+" "+InventoryMain.store.get(i).getSkus()+" "+InventoryMain.store.get(i).getConsole()+" "+InventoryMain.store.get(i).getWhole()+" "+InventoryMain.store.get(i).getSell());
+					System.out.println(InventoryMain.store.get(i).getName()+" "+InventoryMain.store.get(i).getSkus()+" "+InventoryMain.store.get(i).getConsole()+" "+InventoryMain.store.get(i).getWhole()+" "+InventoryMain.store.get(i).getSell()+" "+InventoryMain.store.get(i).getCopies());
 				}
 			
 			System.out.println("What do you want to do?");
@@ -68,16 +70,19 @@ public class Employee
 				System.out.println("What stock do you want to buy?");
 				for(int i=0; i<InventoryMain.store.size();i++)
 					{
-						System.out.println(i+ InventoryMain.store.get(i).getName());
+						System.out.println(i+" "+ InventoryMain.store.get(i).getName());
 					}
 				Scanner userInput2 = new Scanner(System.in);
 				buyingstockChoice= userInput2.nextInt();
+				
+				
+				stockCopies= userInput2.nextInt();
 				
 				try 
 					{ 
 						PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("Inventory.txt", true)));
 						out.println("");
-						out.println("the text");
+						out.println("We just bought");
 						out.close();
 					}
 			  catch (IOException e) 

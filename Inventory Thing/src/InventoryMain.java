@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class InventoryMain
 	{
 		public static ArrayList <Game> store = new ArrayList <Game>();
-		public static void main(String[] args)
+		public static void main(String[] args)throws FileNotFoundException, UnsupportedEncodingException 
 			{
 				fillArray();
 				TextWriter.refresh();

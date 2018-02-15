@@ -8,7 +8,7 @@ public class Employee
 		private static int password;
 		private static boolean keepAsking=true;
 		
-		public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException 
+		public static void employ() throws FileNotFoundException, UnsupportedEncodingException 
 		{
 			InventoryMain.fillArray();
 			meetTHeUsers();

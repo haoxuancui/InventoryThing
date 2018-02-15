@@ -4,7 +4,7 @@ import java.util.*;
 public class InventoryMain
 	{
 		public static ArrayList <Game> store = new ArrayList <Game>();
-		public static void main(String[] args)
+		public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException
 			{
 				fillArray();
 				TextWriter.refresh();
@@ -28,7 +28,7 @@ public class InventoryMain
 						}
 					else
 						{
-						//Employee.main(args) throws FileNotFoundException, UnsupportedEncodingException;
+						Employee.employ();
 						}
 					}
 				catch(InputMismatchException nice)

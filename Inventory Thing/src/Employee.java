@@ -5,6 +5,7 @@ public class Employee
 	{
 		private static int userChoice;
 		private static int buyingstockChoice;
+		private static int newStockCopies;
 		private static int password;
 		private static boolean keepAsking=true;
 		
@@ -36,7 +37,7 @@ public class Employee
 			System.out.println("Hi, here is the stock for us.");
 			for(int i=0; i<InventoryMain.store.size();i++)
 				{
-					System.out.println(InventoryMain.store.get(i).getName()+" "+InventoryMain.store.get(i).getSkus()+" "+InventoryMain.store.get(i).getConsole()+" "+InventoryMain.store.get(i).getWhole()+" "+InventoryMain.store.get(i).getSell());
+					System.out.println(InventoryMain.store.get(i).getName()+" "+InventoryMain.store.get(i).getSkus()+" "+InventoryMain.store.get(i).getConsole()+" "+InventoryMain.store.get(i).getWhole()+" "+InventoryMain.store.get(i).getSell()+" "+InventoryMain.store.get(i).getCopies());
 				}
 			
 			System.out.println("What do you want to do?");
@@ -72,6 +73,11 @@ public class Employee
 					}
 				Scanner userInput2 = new Scanner(System.in);
 				buyingstockChoice= userInput2.nextInt();
+				
+				System.out.println("How many do you want to buy?");
+				Scanner userInput3 = new Scanner(System.in);
+				newStockCopies= userInput3.nextInt();
+				
 				
 				try 
 					{ 
